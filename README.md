@@ -1,9 +1,11 @@
-# doesHaveBottleForVentura
+# Does Have Bottle For Ventura?
 Little Python script for checking if your current installed Homebrew packages have bottles with support for macOS Ventura
 
 ## Motivation
 
 With the release of macOS Ventura, I was curious to know which packages from Homebrew already support this system, so I created this little script that checks this with JSON information from the Homebrew Formulae API
+
+It is worth mentioning that the script only shows data from the API, since it is not yet possible to verify which bottle was used to install the package in your case
 
 ## Usage
 
@@ -33,6 +35,8 @@ Now, if needed (for example, if you upgraded from Monterey), you can run `brew r
 
 > Note: After running the script, you will get a command to reinstall the necessary packages
 > <img width="762" alt="image" src="https://user-images.githubusercontent.com/36604233/197838253-834087b0-6ff4-4121-b160-e4f3c0e316c8.png">
+>
+> It is also possible to do the same with a `brew upgrade ...`, but reinstalling seems like a pretty reliable option to me
 
 ## Credits
 
