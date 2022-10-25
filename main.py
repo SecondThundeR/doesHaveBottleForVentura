@@ -39,11 +39,11 @@ def check_for_ventura_support(formulae_data):
             .get('arm64_ventura')
 
         if not ventura_bottle:
-            print(f'{FAIL_COLOR}Formulae "{name}" does '
+            print(f'{FAIL_COLOR}Formula "{name}" does '
                   f'not have a bottle for Ventura{NO_COLOR}')
             continue
 
-        print(f'{SUCCESS_COLOR}Formulae "{name}" has a bottle for Ventura{NO_COLOR}')
+        print(f'{SUCCESS_COLOR}Formula "{name}" has a bottle for Ventura{NO_COLOR}')
         supported_formulae.append(name)
 
     return f'brew reinstall {" ".join(supported_formulae)}'
@@ -59,7 +59,7 @@ def main():
 
     print(f'{PURPLE_COLOR}{"=" * 20}{NO_COLOR}'
           f'\n{BOLD_TEXT}Run the following command to reinstall '
-          f'the formulae that have a bottle for Ventura:{NO_COLOR}\n'
+          f'all packages that have a bottle for Ventura:{NO_COLOR}\n'
           f'{CYAN_TEXT}{reinstall_command}{NO_COLOR}')
 
 
