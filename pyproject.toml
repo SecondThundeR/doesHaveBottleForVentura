@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "doesHaveBottleForVentura"
 version = "1.0.0"
-description = "Little Python script for checking if your current installed Homebrew packages have bottles with support for macOS Ventura"
+description = "Little Python script for checking if your current installed Homebrew formulae have bottles with support for macOS Ventura"
 authors = ["SecondThundeR <awayfromgalaxy@gmail.com>"]
 readme = "README.md"
 
@@ -9,7 +9,6 @@ readme = "README.md"
 python = "^3.10"
 asyncio = "^3.4.3"
 aiohttp = "^3.8.3"
-
 
 [build-system]
 requires = ["poetry-core"]

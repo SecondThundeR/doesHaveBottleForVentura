@@ -54,7 +54,7 @@ def main():
     formulae_urls = get_formulae_urls()
     formulae_data = loop.run_until_complete(fetch_all(formulae_urls, loop))
 
-    print("Bottle Ventura support check results:")
+    print(f"{BOLD_TEXT}Result of the macOS Ventura bottle support:{NO_COLOR}")
     reinstall_command = check_for_ventura_support(formulae_data)
 
     print(f'{PURPLE_COLOR}{"=" * 20}{NO_COLOR}'
