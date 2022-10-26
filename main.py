@@ -59,7 +59,7 @@ def main():
 
     print(f'{PURPLE_COLOR}{"=" * 20}{NO_COLOR}'
           f'\n{BOLD_TEXT}Run the following command to reinstall '
-          f'all packages that have a bottle for Ventura:{NO_COLOR}\n'
+          f'all formulae that have a bottle for Ventura:{NO_COLOR}\n'
           f'{CYAN_TEXT}{reinstall_command}{NO_COLOR}')
 
 
