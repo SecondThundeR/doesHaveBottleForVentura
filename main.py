@@ -37,13 +37,23 @@ def check_for_ventura_support(formulae_data):
             .get('stable', {})\
             .get('files', {})\
             .get('arm64_ventura')
+        all_bottle = formula.get('bottle', {})\
+            .get('stable', {})\
+            .get('files', {})\
+            .get('all')
 
-        if not ventura_bottle:
+        if not ventura_bottle and not all_bottle:
             print(f'{FAIL_COLOR}Formula "{name}" does '
                   f'not have a bottle for Ventura{NO_COLOR}')
             continue
 
-        print(f'{SUCCESS_COLOR}Formula "{name}" has a bottle for Ventura{NO_COLOR}')
+        success_msg = (
+            f'{SUCCESS_COLOR}Formula "{name}" has ' f"a bottle for all platforms{NO_COLOR}"
+            if all_bottle
+            else f'{SUCCESS_COLOR}Formula "{name}" has a bottle for Ventura{NO_COLOR}'
+        )
+
+        print(success_msg)
         supported_formulae.append(name)
 
     return f'brew reinstall {" ".join(supported_formulae)}'
