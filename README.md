@@ -29,12 +29,12 @@ brew list --formulae | python ./main.py
 ```
 
 4. Check the result (Supported - highlighted in green, unsupported - in red)
-<img width="1034" alt="image" src="https://user-images.githubusercontent.com/36604233/197848422-cf43fb31-56b9-4af6-bd46-607d3ffd7f63.png">
+<img width="762" alt="image" src="https://user-images.githubusercontent.com/36604233/197969790-0f8dc4d0-0780-43eb-95d1-d3ed0ef4df87.png">
 
 Now, if needed (for example, if you upgraded from Monterey), you can run `brew reinstall ...` and pass names of the formulae that received the upgrade
 
 > Note: After running the script, you will get a command to reinstall the necessary formulae
-> <img width="1034" alt="image" src="https://user-images.githubusercontent.com/36604233/197847620-95d88290-272b-4d00-80fe-711520b23a1d.png">
+> <img width="762" alt="image" src="https://user-images.githubusercontent.com/36604233/197969812-b0a435d9-7a8c-438b-935f-e1dcf9a4e835.png">
 >
 > It is also possible to do the same with a `brew upgrade ...`, but reinstalling seems like a pretty reliable option to me
 
